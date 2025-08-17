@@ -1,0 +1,235 @@
+/* Import Figtree font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap');
+
+/* CSS Variables for Colors */
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+  --font-family: 'Figtree', sans-serif;
+}
+
+/* Base Styles */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing:    inherit;
+}
+
+/* Desktop Styles */
+.desktop{
+    width: 100%;
+    position: relative;
+    background-color: var(--yellow);
+    height: 960px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 14px;
+    color: #111;
+    font-family: Figtree;
+    gap: 24px;
+}
+
+/* Card Styles */
+.card {
+    width: 384px;
+    box-shadow: 8px 8px 0px #000;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #111;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px;
+    gap: 24px;
+}
+
+/* Image Styles */
+.img {
+    align-self: stretch;
+    position: relative;
+    border-radius: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 200px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: left;
+}
+
+.learning {
+    position: relative;
+    line-height: 150%;
+    font-weight: 800;
+}
+.category {
+    position: relative;
+    border-radius: 4px;
+    background-color: #f4d04e;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray-950);
+}
+
+.publish-date {
+    position: relative;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 500;
+    color: var(--gray-950);
+    text-align: left;
+}
+
+.title {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    position: relative;
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 800;
+    color: var(--gray-950);
+    text-align: left;
+    display: inline-block;
+}
+
+.description {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    color: var(--gray-500);
+    text-align: left;
+    display: inline-block;
+}
+
+.author {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: left;
+    font-size: 14px;
+    color: var(--gray-950);
+}
+
+.userpic-icon{
+    width: 32px;
+    height: 32px;
+    position: relative;
+    border-radius: 100%;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents shrinking in flex layouts */
+}
+
+.author-name {
+    position: relative;
+    font-weight: 800;
+}
+
+.attribution {
+    position: relative;
+    font-weight: 500;
+    color: var(--gray-500);
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--gray-950);
+    line-height: 140%;
+    transition: color 0.2s;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+    color: var(--gray-500);
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+
+/* Mobile First (375px and below) */
+@media (max-width: 425px) {
+  .card {
+    width: 90vw;
+    padding: 16px;
+    gap: 16px;
+  }
+  .img {
+    height: 160px;
+    border-radius: 8px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .author {
+    font-size: 12px;
+    gap: 8px;
+  }
+}
+
+/* Desktop (min 1024px, optimized for 1440px) */
+@media (min-width: 1024px) {
+  .desktop {
+    height: 100vh;
+    font-size: 16px;
+  }
+  .card {
+    width: 384px;
+    padding: 24px;
+    gap: 24px;
+  }
+  .img {
+    height: 200px;
+    border-radius: 10px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .description {
+    font-size: 16px;
+  }
+  .author {
+    font-size: 14px;
+    gap: 12px;
+  }
+}
